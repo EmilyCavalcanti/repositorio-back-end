@@ -1,4 +1,4 @@
-const express = require("express") // inicio do express
+const express = require ("express") // inicio do express
 const router = express.Router() // configuraçao da primeira 
 const cors = require('cors') // trazer o pacote cors que permite consumir essa API no front-end
 const conectaBancoDeDados = require ('./bancoDeDados')  // ligando ao arquivo bancoDeDados
@@ -16,7 +16,7 @@ const porta = 3333 // criaçao da porta
  //GET
  async function  mostraMulheres(request, response) {
     try {
-        const mulheresVindasDoBancoDeDados  = await Mulherfind()
+        const mulheresVindasDoBancoDeDados  = await Mulher.find()
         
         response.json(mulheresVindasDoBancoDeDados)
     }catch(erro){
